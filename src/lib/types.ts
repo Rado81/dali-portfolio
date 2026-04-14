@@ -61,5 +61,5 @@ export interface JournalPost {
   readingTime: string;
   category: "bts" | "gear" | "industry" | "tutorial";
   featuredImage: string;
-  content: string;
+  content?: string;
 }
