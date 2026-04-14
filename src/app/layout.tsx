@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { inter, bebasNeue } from "@/lib/fonts";
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/layout/footer";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${bebasNeue.variable}`}>
       <body className="font-sans bg-background-deep text-text-primary">
-        {children}
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
