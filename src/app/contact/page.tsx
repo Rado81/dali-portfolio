@@ -26,7 +26,7 @@ export default function ContactPage() {
 
   return (
     <PageTransition>
-      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
+      <section className="relative pt-32 pb-16 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background-elevated to-background-deep" />
         <FilmGrain />
         <div className="relative z-20 text-center">
@@ -74,15 +74,19 @@ export default function ContactPage() {
               <div>
                 <p className="text-text-muted text-[9px] tracking-label uppercase mb-4">Contact Info</p>
                 <div className="space-y-4">
-                  <a href="mailto:hello@sandicfilm.com" className="flex items-center gap-3 text-text-secondary text-sm hover:text-gold transition-colors"><Mail className="w-4 h-4 text-gold" /> hello@sandicfilm.com</a>
-                  <a href="tel:+4500000000" className="flex items-center gap-3 text-text-secondary text-sm hover:text-gold transition-colors"><Phone className="w-4 h-4 text-gold" /> +45 00 00 00 00</a>
+                  <a href="mailto:Dali@sandicfilm.com" className="flex items-center gap-3 text-text-secondary text-sm hover:text-gold transition-colors"><Mail className="w-4 h-4 text-gold" /> Dali@sandicfilm.com</a>
+                  <a href="tel:+4523663748" className="flex items-center gap-3 text-text-secondary text-sm hover:text-gold transition-colors"><Phone className="w-4 h-4 text-gold" /> +45 23 66 37 48</a>
                   <p className="flex items-center gap-3 text-text-secondary text-sm"><MapPin className="w-4 h-4 text-gold" /> Copenhagen, Denmark</p>
                 </div>
               </div>
               <div>
                 <p className="text-text-muted text-[9px] tracking-label uppercase mb-4">Social</p>
                 <div className="flex gap-4">
-                  {["Instagram", "Vimeo", "LinkedIn"].map((p) => (<a key={p} href="#" className="text-text-secondary text-sm hover:text-gold transition-colors">{p}</a>))}
+                  {[
+                    { name: "Instagram", href: "https://instagram.com/dalisandic" },
+                    { name: "YouTube", href: "https://www.youtube.com/@daliborsandic4938" },
+                    { name: "LinkedIn", href: "https://www.linkedin.com/in/dalibor-sandic-955204139/" },
+                  ].map((p) => (<a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" className="text-text-secondary text-sm hover:text-gold transition-colors">{p.name}</a>))}
                 </div>
               </div>
               <div>

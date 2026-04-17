@@ -9,7 +9,7 @@ export function AboutTeaser({ bio }: { bio: string }) {
         <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
           <ScrollReveal direction="left" className="flex-shrink-0">
             <div className="relative w-48 h-60 md:w-64 md:h-80 rounded overflow-hidden border border-gold-subtle bg-background-elevated">
-              <Image src="/images/placeholder.jpg" alt="Dali Sandic" fill className="object-cover" />
+              <Image src="/images/dali-profile.jpg" alt="Dali Sandic" fill sizes="(max-width: 768px) 192px, 256px" className="object-cover" />
             </div>
           </ScrollReveal>
           <ScrollReveal direction="right">

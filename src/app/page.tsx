@@ -4,18 +4,17 @@ import { StatsCounter } from "@/components/home/stats-counter";
 import { AboutTeaser } from "@/components/home/about-teaser";
 import { Testimonials } from "@/components/home/testimonials";
 import { CTASection } from "@/components/home/cta-section";
-import { getSiteConfig, getAllProjects, getAbout, getTestimonials } from "@/lib/content";
+import { getSiteConfig, getAbout, getTestimonials } from "@/lib/content";
 
 export default function HomePage() {
   const site = getSiteConfig();
-  const projects = getAllProjects().filter((p) => p.featured);
   const about = getAbout();
   const testimonials = getTestimonials();
 
   return (
     <>
-      <HeroSection name={site.name} title={site.title} showreelUrl="" />
-      <FeaturedWork projects={projects} />
+      <HeroSection name={site.name} title={site.title} youtubeId="EoXWVt3NjNI" reelYoutubeId="5RXfPmbynlk" />
+      <FeaturedWork />
       <StatsCounter stats={[
         { value: site.stats.projects, suffix: "+", label: "Projects" },
         { value: site.stats.years, suffix: "", label: "Years" },

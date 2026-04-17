@@ -8,11 +8,12 @@ import type { Project } from "@/lib/types";
 interface ProjectCardProps {
   project: Project;
   featured?: boolean;
+  index?: number;
 }
 
-export function ProjectCard({ project, featured = false }: ProjectCardProps) {
+export function ProjectCard({ project, featured = false, index = 0 }: ProjectCardProps) {
   return (
-    <motion.div layout initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} transition={{ duration: 0.4 }} className={featured ? "col-span-full" : ""}>
+    <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} transition={{ duration: 0.3, delay: index * 0.05 }} className={featured ? "col-span-full" : ""}>
       <Link href={`/work/${project.slug}`} className="group block">
         <div className={`relative overflow-hidden rounded border border-transparent group-hover:border-gold/30 transition-colors duration-300 bg-background-elevated ${featured ? "aspect-[21/9]" : "aspect-[4/3]"}`}>
           <Image src={project.thumbnail} alt={project.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />

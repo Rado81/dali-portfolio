@@ -26,13 +26,20 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
           </button>
         ))}
       </div>
-      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <AnimatePresence mode="popLayout">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={filter}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.25 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4"
+        >
           {filtered.map((project, i) => (
-            <ProjectCard key={project.slug} project={project} featured={i === 0 && filter === "all"} />
+            <ProjectCard key={project.slug} project={project} featured={i === 0 && filter === "all"} index={i} />
           ))}
-        </AnimatePresence>
-      </motion.div>
+        </motion.div>
+      </AnimatePresence>
     </>
   );
 }

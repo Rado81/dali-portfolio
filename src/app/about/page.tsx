@@ -11,7 +11,7 @@ export default function AboutPage() {
 
   return (
     <PageTransition>
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+      <section className="relative pt-32 pb-16 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background-elevated to-background-deep" />
         <FilmGrain />
         <div className="relative z-20 text-center">
@@ -25,7 +25,7 @@ export default function AboutPage() {
         <ScrollReveal className="mb-20">
           <div className="flex flex-col md:flex-row gap-10 items-start">
             <div className="flex-shrink-0 w-48 h-64 md:w-56 md:h-72 relative rounded overflow-hidden border border-gold-subtle bg-background-elevated">
-              <Image src="/images/placeholder.jpg" alt="Dali Sandic" fill className="object-cover" />
+              <Image src="/images/dali-profile.jpg" alt="Dali Sandic" fill sizes="(max-width: 768px) 192px, 224px" className="object-cover" />
             </div>
             <div>
               <h2 className="text-text-primary text-xl tracking-wide font-light uppercase mb-6">The Eye Behind the Lens</h2>

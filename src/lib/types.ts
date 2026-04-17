@@ -42,7 +42,7 @@ export interface SiteConfig {
   availability: string;
   social: {
     instagram: string;
-    vimeo: string;
+    youtube: string;
     linkedin: string;
   };
   stats: {

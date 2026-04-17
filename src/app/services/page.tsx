@@ -26,7 +26,7 @@ export default function ServicesPage() {
   const services = getServices();
   return (
     <PageTransition>
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+      <section className="relative pt-32 pb-16 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background-elevated to-background-deep" />
         <FilmGrain />
         <div className="relative z-20 text-center">
