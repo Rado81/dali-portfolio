@@ -61,7 +61,7 @@ export function HeroSection({ name, title, youtubeId, reelYoutubeId, showreelUrl
             <MeshGradient
               className="w-full h-full"
               colors={["#050505", "#1A1A1A", "#333333", "#D4AF37"]}
-              speed={0.5}
+              speed={0.15}
               style={{ backgroundColor: "#050505" }}
             />
           )}
