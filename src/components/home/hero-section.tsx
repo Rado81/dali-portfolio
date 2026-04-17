@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { Play, X } from "lucide-react";
 import { FilmGrain } from "@/components/ui/film-grain";
 import { MagneticButton } from "@/components/ui/magnetic-button";
+import { MeshGradient } from "@paper-design/shaders-react";
 
 interface HeroSectionProps {
   name: string;
@@ -57,7 +58,12 @@ export function HeroSection({ name, title, youtubeId, reelYoutubeId, showreelUrl
               <source src={showreelUrl} type="video/mp4" />
             </video>
           ) : (
-            <div className="w-full h-full hero-gradient" />
+            <MeshGradient
+              className="w-full h-full"
+              colors={["#050505", "#1A1A1A", "#333333", "#D4AF37"]}
+              speed={0.5}
+              style={{ backgroundColor: "#050505" }}
+            />
           )}
         </motion.div>
 
